@@ -13,4 +13,6 @@ public class BaseConfig {
     public final static String currencyApiKey = "d6a21609b17c4afba2b7953518b5e4f2";
 
     public final static String gifApiKey = "fc56hSF9CWB01ll9FhcdV9KpydezWmKC";
+
+    public final static String errorGif = "https://c.tenor.com/DiUjye_MGoAAAAAd/not-found-404error.gif";
 }
