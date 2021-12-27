@@ -1,6 +1,5 @@
 package com.lyugge.alpha_task.Services;
 
-import com.lyugge.alpha_task.ApiClients.CurrencyToUSDClient;
 import com.lyugge.alpha_task.Enums.ExchangeRateRelation;
 import org.springframework.lang.NonNull;
 

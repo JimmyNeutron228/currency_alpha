@@ -1,8 +1,7 @@
 package com.lyugge.alpha_task.ApiClients;
 
-import com.lyugge.alpha_task.ApiResponse.Relation;
 import com.lyugge.alpha_task.Config.BaseConfig;
-import org.springframework.beans.factory.annotation.Value;
+import com.lyugge.alpha_task.ApiResponse.Relation;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.bind.annotation.PathVariable;

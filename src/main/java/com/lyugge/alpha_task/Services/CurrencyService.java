@@ -1,11 +1,11 @@
 package com.lyugge.alpha_task.Services;
 
+import com.lyugge.alpha_task.Enums.ExchangeRateRelation;
 import com.lyugge.alpha_task.ApiClients.CurrencyToUSDClient;
 import com.lyugge.alpha_task.ApiClients.GifClient;
 import com.lyugge.alpha_task.ApiResponse.GifObject;
 import com.lyugge.alpha_task.ApiResponse.Relation;
 import com.lyugge.alpha_task.Config.BaseConfig;
-import com.lyugge.alpha_task.Enums.ExchangeRateRelation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;

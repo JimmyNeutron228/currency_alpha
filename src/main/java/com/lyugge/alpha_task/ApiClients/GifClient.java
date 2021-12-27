@@ -1,7 +1,7 @@
 package com.lyugge.alpha_task.ApiClients;
 
-import com.lyugge.alpha_task.ApiResponse.GifObject;
 import com.lyugge.alpha_task.Config.BaseConfig;
+import com.lyugge.alpha_task.ApiResponse.GifObject;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.bind.annotation.RequestMapping;
