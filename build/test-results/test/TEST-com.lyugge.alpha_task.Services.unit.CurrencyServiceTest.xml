@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.lyugge.alpha_task.Services.unit.CurrencyServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-12-28T16:42:25" hostname="LAPTOP-JQMPI2V3" time="0.806">
+  <properties/>
+  <testcase name="shouldCorrectlyReturnGifUrlTest()" classname="com.lyugge.alpha_task.Services.unit.CurrencyServiceTest" time="0.789"/>
+  <testcase name="shouldCorrectlyReturnGifUrlTest1()" classname="com.lyugge.alpha_task.Services.unit.CurrencyServiceTest" time="0.009"/>
+  <testcase name="shouldCorrectlyReturnGifUrlTest2()" classname="com.lyugge.alpha_task.Services.unit.CurrencyServiceTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
