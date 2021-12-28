@@ -1,0 +1,5 @@
+FROM openjdk:11.0.7-jdk-slim
+
+COPY out/artifacts/currency_alpha_jar/currency_alpha.jar /currency_alpha.jar
+
+CMD ["java", "-jar", "/currency_alpha.jar"]
