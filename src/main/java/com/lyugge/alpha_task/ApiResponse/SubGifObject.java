@@ -1,11 +1,15 @@
 package com.lyugge.alpha_task.ApiResponse;
 
-import java.util.Map;
+import java.util.HashMap;
 
 public class SubGifObject {
-    private Map<String, Map<String, String>> images;
+    private HashMap<String, HashMap<String, String>> images;
 
-    public Map<String, Map<String, String>> getImages() {
+    public HashMap<String, HashMap<String, String>> getImages() {
         return images;
+    }
+
+    public void setImages(HashMap<String, HashMap<String, String>> images) {
+        this.images = images;
     }
 }

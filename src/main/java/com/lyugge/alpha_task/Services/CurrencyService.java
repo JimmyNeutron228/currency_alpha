@@ -21,7 +21,7 @@ public class CurrencyService implements ICurrencyService {
 
     @Override
     @NonNull
-    public ExchangeRateRelation currencySituation(@NonNull String currency) {
+    public String necessaryGif(@NonNull String currency) {
         Date nowDate = new Date();
         Date prevDate = new Date(nowDate.getTime() - 86400000);
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -29,23 +29,19 @@ public class CurrencyService implements ICurrencyService {
         String prevDay = dateFormat.format(prevDate);
         Relation nowRelation = currencyClient.readRelationByDay(nowDay);
         Relation prevRelation = currencyClient.readRelationByDay(prevDay);
+        ExchangeRateRelation currencySituation;
         try {
             if (nowRelation.curRelation(currency) > prevRelation.curRelation(currency)) {
-                return ExchangeRateRelation.MORE_THAN;
+                currencySituation = ExchangeRateRelation.MORE_THAN;
+            } else {
+                currencySituation = ExchangeRateRelation.LESS_THAN;
             }
-            return ExchangeRateRelation.LESS_THAN;
         } catch (NullPointerException e) {
-            return ExchangeRateRelation.ERROR;
+            currencySituation = ExchangeRateRelation.ERROR;
         }
-    }
-
-    @Override
-    @NonNull
-    public String necessaryGif(@NonNull String currency) {
         GifObject object;
-        ExchangeRateRelation relation = currencySituation(currency);
         String answer;
-        if (relation.equals(ExchangeRateRelation.MORE_THAN)) {
+        if (currencySituation.equals(ExchangeRateRelation.MORE_THAN)) {
             object = gifClient.readRichGif();
             answer = object
                     .getData()
@@ -53,7 +49,7 @@ public class CurrencyService implements ICurrencyService {
                     .getImages()
                     .get("original")
                     .get("url");
-        } else if (relation.equals(ExchangeRateRelation.LESS_THAN)) {
+        } else if (currencySituation.equals(ExchangeRateRelation.LESS_THAN)) {
             object = gifClient.readBrokeGif();
             answer = object
                     .getData()
